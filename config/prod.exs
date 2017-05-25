@@ -16,6 +16,7 @@ use Mix.Config
 config :gigalixir_getting_started_phx_1_3_rc_2, GigalixirGettingStartedPhx13Rc2.Web.Endpoint,
   on_init: {GigalixirGettingStartedPhx13Rc2.Web.Endpoint, :load_from_system_env, []},
   url: [host: "example.com", port: 80],
+  server: true,
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
