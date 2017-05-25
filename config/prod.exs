@@ -62,3 +62,11 @@ config :logger, level: :info
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
 # import_config "prod.secret.exs"
+config :gigalixir_getting_started_phx_1_3_rc_2, GigalixirGettingStartedPhx13Rc2.Endpoint,
+  server: true,
+  secret_key_base: "${SECRET_KEY_BASE}"
+
+config :gigalixir_getting_started_phx_1_3_rc_2, GigalixirGettingStartedPhx13Rc2.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  url: {:system, "DATABASE_URL"},
+  pool_size: 20
