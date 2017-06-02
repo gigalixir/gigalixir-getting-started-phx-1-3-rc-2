@@ -71,3 +71,11 @@ config :gigalixir_getting_started_phx_1_3_rc_2, GigalixirGettingStartedPhx13Rc2.
   adapter: Ecto.Adapters.Postgres,
   url: {:system, "DATABASE_URL"},
   pool_size: 20
+
+config :libcluster,
+  topologies: [
+    k8s_example: [
+      strategy: Cluster.Strategy.Kubernetes,
+      config: [
+        kubernetes_selector: "${LIBCLUSTER_KUBERNETES_SELECTOR}",
+        kubernetes_node_basename: "${LIBCLUSTER_KUBERNETES_NODE_BASENAME}"]]]

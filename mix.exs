@@ -36,6 +36,7 @@ defmodule GigalixirGettingStartedPhx13Rc2.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:distillery, "~> 1.0.0"},
+     {:libcluster, "~> 2.1"},
      {:cowboy, "~> 1.0"}]
   end
 
